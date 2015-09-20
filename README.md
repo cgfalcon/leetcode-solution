@@ -1,3 +1,3 @@
 Solution For Leetcode
 
-progress: 6 / 269
+progress: 7 / 269
