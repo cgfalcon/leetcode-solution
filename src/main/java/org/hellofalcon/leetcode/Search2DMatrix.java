@@ -10,13 +10,17 @@ package org.hellofalcon.leetcode;
 public class Search2DMatrix {
 
     public boolean searchMatrix(int[][] matrix, int target) {
+        if (matrix.length == 0) {
+            return false;
+        }
+
         int row = matrix.length;
         int col = matrix[0].length;
 
         int x = 0; // start from first row
         int y = col - 1; // start from right most column
 
-        while (x < row && col >= 0) {
+        while (x < row && y >= 0) {
 
             if (matrix[x][y] == target) {
                 return true;
@@ -25,9 +29,9 @@ public class Search2DMatrix {
             if (matrix[x][y] > target) {
                 // because the column is sorted in ascending order, so we increase x here.
                 // after x increased, we also excluded the previous row
-                x++;
-            } else {
                 y--;
+            } else {
+                x++;
             }
         }
 
@@ -45,8 +49,8 @@ public class Search2DMatrix {
         };
 
         Search2DMatrix s2d = new Search2DMatrix();
-        assert s2d.searchMatrix(input, 9);
+        System.out.println(s2d.searchMatrix(input, 9));
 
-        assert s2d.searchMatrix(input, 20);
+        System.out.println(s2d.searchMatrix(input, 20));
     }
 }
