@@ -14,15 +14,32 @@ public class ArrayUtils {
         System.out.println(" ]");
     }
 
-    public static void printArray(int[][] nums) {
+    public static void printArray(Object[] nums) {
         System.out.print("[ ");
+        for(int i = 0; i < nums.length; i ++) {
+            System.out.print(nums[i] + " ");
+        }
+        System.out.println(" ]");
+    }
+
+    public static void printArray(String[] nums) {
+        System.out.print("[ ");
+        for(int i = 0; i < nums.length; i ++) {
+            System.out.print(nums[i] + " ");
+        }
+        System.out.println(" ]");
+    }
+
+
+    public static void printArray(int[][] nums) {
+        System.out.println("[ ");
         for (int i = 0; i < nums.length; i++) {
-            System.out.println("[ ");
+            System.out.print(" [ ");
             for(int j = 0; j < nums[i].length; j ++) {
                 System.out.print(nums[i][j] + " ");
             }
-            System.out.println(" ]");
+            System.out.println("]");
         }
-        System.out.println(" ]");
+        System.out.println("]");
     }
 }

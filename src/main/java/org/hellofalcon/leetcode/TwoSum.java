@@ -3,6 +3,9 @@ package org.hellofalcon.leetcode;
 
 import org.hellofalcon.leetcode.utils.ArrayUtils;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @author: chugang.cg
  * @date: 2015/8/20.
@@ -17,6 +20,19 @@ public class TwoSum {
                     return new int[]{i + 1, j + 1};
                 }
             }
+        }
+
+        return null;
+    }
+
+    public int[] twoSum2(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        for(int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+            if (map.containsKey(complement)) {
+                return new int[]{ map.get(complement)};
+            }
+            map.put(nums[i], i);
         }
 
         return null;
