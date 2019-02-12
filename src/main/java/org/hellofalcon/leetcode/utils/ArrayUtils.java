@@ -14,6 +14,14 @@ public class ArrayUtils {
         System.out.println(" ]");
     }
 
+    public static void printArrayWithIdx(int[] nums) {
+        System.out.print("[ ");
+        for(int i = 0; i < nums.length; i ++) {
+            System.out.print("[" + i + "]: " + nums[i] + ", ");
+        }
+        System.out.println(" ]");
+    }
+
     public static void printArray(Object[] nums) {
         System.out.print("[ ");
         for(int i = 0; i < nums.length; i ++) {
