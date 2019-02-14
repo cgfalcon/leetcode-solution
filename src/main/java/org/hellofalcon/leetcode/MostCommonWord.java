@@ -3,6 +3,8 @@ package org.hellofalcon.leetcode;
 import java.util.*;
 
 /**
+ * 819. Most Common Word
+ *
  * @author - chugang.cg
  * @create - 2019/2/10
  */
@@ -31,8 +33,6 @@ public class MostCommonWord {
             if (bannedSet.contains(word)) {
                 continue;
             }
-
-
 
             if (!word.equals(lastWord)) {
                 if (wordHit > mostCommonWrodFreq) {

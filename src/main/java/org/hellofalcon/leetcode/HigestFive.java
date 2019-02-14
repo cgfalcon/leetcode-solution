@@ -32,16 +32,23 @@ public class HigestFive {
             }
         });
 
-        pq.add(new Record(1, 3));
-        pq.add(new Record(1, 2));
-        pq.add(new Record(1, 1));
-        pq.add(new Record(1, 9));
-        pq.add(new Record(1, 4));
-        pq.add(new Record(1, 8));
+        addToQueue(pq, new Record(1, 3), 3);
+        addToQueue(pq, new Record(1, 7), 3);
+        addToQueue(pq, new Record(1, 1), 3);
+        addToQueue(pq, new Record(1, 9), 3);
+        addToQueue(pq, new Record(1, 4), 3);
+        addToQueue(pq, new Record(1, 8), 3);
 
         while (pq.size() != 0) {
             System.out.println(pq.poll().score);
         }
 
+    }
+
+    public static void addToQueue(PriorityQueue<Record> pq, Record record, int k) {
+        pq.add(record);
+        if (pq.size() > k) {
+            pq.poll();
+        }
     }
 }
