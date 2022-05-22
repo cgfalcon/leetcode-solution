@@ -7,7 +7,6 @@ package org.hellofalcon.leetcode;
 public class ValidNumber {
 
     public ValidNumber() {
-
     }
 
     int current = 0;
